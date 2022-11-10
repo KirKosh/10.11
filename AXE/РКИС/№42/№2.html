@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Zavod</title>
+		
+	</head>
+	<body>
+		<p>aaa</p>
+		<p>bbb</p>
+		<p>ccc</p>
+		<p>ddd</p>
+		<p>eee</p>
+		<button>click me</button>
+		<script>
+			let button = document.querySelector('button');
+			let elems  = document.querySelectorAll('p');
+			let set = new Set;
+			for (let elem of elems) {
+				elem.addEventListener('click', function() {
+				});
+			}
+			for (let elem of elems) {
+				elem.addEventListener('click', function() {
+					set.add(this);
+				});
+			}
+			button.addEventListener('click', function() {
+				for (let elem of set) {
+					elem.textContent = elem.textContent + '!';
+				}
+			});
+		</script>	
+	</body>
+</html>
